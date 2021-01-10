@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Foods">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="120px"
+        android:background="#0000FF"
+        android:text="Binus EzyFoody"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="75px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/orderBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="order"
+        android:text="MyOrder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/historyBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="history"
+        android:text="History"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orderBtn">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/nasgorImage"
+                android:layout_width="107dp"
+                android:layout_height="118dp"
+                app:srcCompat="@drawable/nasgor" />
+
+            <Button
+                android:id="@+id/nasgorTxt"
+                android:layout_width="86dp"
+                android:layout_height="43dp"
+                android:onClick="nasgor"
+                android:text="Nasi Goreng\nRp. 25.000"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="4pt" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="75dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="107dp"
+                android:layout_height="118dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/nasgorImage"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ayamgoreng" />
+
+            <Button
+                android:id="@+id/ayamgorengtBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="43dp"
+                android:onClick="ayamgoreng"
+                android:text="Ayam Goreng\nRp. 35.000"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="4pt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/nasgorTxt"
+                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="106dp"
+                android:layout_height="117dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nasgorTxt"
+                app:srcCompat="@drawable/gadogado" />
+
+            <Button
+                android:id="@+id/gadogadoBtn"
+                android:layout_width="86dp"
+                android:layout_height="43dp"
+                android:onClick="gadogado"
+                android:text="Gado Gado\nRp. 15000"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="4pt"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView3"
+                app:layout_constraintVertical_bias="0.054" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="75dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="107dp"
+                android:layout_height="116dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                app:layout_constraintTop_toBottomOf="@+id/ayamgorengtBtn"
+                app:srcCompat="@drawable/miegoreng" />
+
+            <Button
+                android:id="@+id/miegorengBtn"
+                android:layout_width="86dp"
+                android:layout_height="43dp"
+                android:onClick="miegoreng"
+                android:text="Mie Goreng\nRp. 12000"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="4pt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
